@@ -10,15 +10,15 @@ const authRoutes = require("./routes/authRoutes")
 const { mongoose } = require("mongoose");
 const cookieParser = require('cookie-parser')
 //use cors for every routes
-// app.use(cors({
-//   credentials: true,
-//   origin: process.env.ENVIRONMENT === "development"
-//     ? "http://localhost:5173"
-//     : "https://libraria-frontend.netlify.app",
-//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//   allowedHeaders: ['Content-Type', 'Authorization']
-// }));
-app.use(cors())
+app.use(cors({
+  credentials: true,
+  origin: process.env.ENVIRONMENT === "development"
+    ? "http://localhost:5173"
+    : "https://librbary-frontend.vercel.app/",
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 
 
 //get body of requests
