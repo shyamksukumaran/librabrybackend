@@ -14,11 +14,13 @@ const cookieParser = require('cookie-parser')
 //   credentials: true,
 //   origin: process.env.ENVIRONMENT === "development"
 //     ? "http://localhost:5173"
-//     : "https://libraria-frontend.netlify.app",
+//     : "https://librbary-frontend.vercel.app/",
 //   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 //   allowedHeaders: ['Content-Type', 'Authorization']
 // }));
-app.use(cors())
+
+app.use(cors());
+
 
 
 //get body of requests
